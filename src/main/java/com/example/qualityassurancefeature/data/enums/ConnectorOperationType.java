@@ -1,0 +1,18 @@
+package com.example.qualityassurancefeature.data.enums;
+
+public enum ConnectorOperationType {
+
+    START_UP,
+    CONNECTION_LOST,
+    CONNECTOR_UNLOCK,
+    GET_DIAGNOSTICS,
+    HARD_RESET,
+    SOFT_RESET,
+    GET_CONFIGURATION,
+    TRIGGER_STATUS_NOTIFICATION,
+    TRIGGER_METER_VALUE,
+    TRIGGER_BOOT_NOTIFICATION,
+    CHANGE_CONFIGURATION,
+    HEARTBEAT,
+    QUALITY_ASSURANCE
+}

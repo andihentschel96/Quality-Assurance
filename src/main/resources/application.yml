@@ -1,0 +1,24 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: OCPP_Deep_Dive
+    rabbitmq:
+      host: "${MSG_BROKER_URL:localhost}"
+      port: 5672
+      username: "${MSG_BROKER_USERNAME:guest}"
+      password: "${MSG_BROKER_PASSWORD:guest}"
+      listener:
+        simple:
+          retry:
+            enabled: true
+          concurrency: 2
+  server:
+    port: 8090
+    shutdown: graceful
+  rabbitMq:
+    changeConfiguration:
+      routingKey: change-configuration
+      topicName: change-configuration
+      queueName: change-configuration
